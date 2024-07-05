@@ -6,14 +6,16 @@ import { useMatch } from 'react-router';
 import ButtonLogout from './ButtonLogout.tsx';
 
 const Header = () => {
-  const rootRoute = useMatch('/');
-  const teamRoute = useMatch('/team');
   const memberRoute = useMatch('/team/:id');
+
+  const otherRoutes = () => {
+    return !memberRoute;
+  };
 
   return (
     <header className={cl.header}>
       <Container className={cl.headerWrapper}>
-        {(rootRoute || teamRoute) && <TeamHeader />}
+        {otherRoutes() && <TeamHeader />}
         {memberRoute && <MemberHeader />}
         <ButtonLogout />
       </Container>
