@@ -1,0 +1,69 @@
+.memberWrapper {
+  padding: 49px 0 314px 108px;
+  display: flex;
+  color: #151317;
+
+  @media (max-width: 991px) {
+    padding: 49px 0 314px 0;
+    flex-direction: column;
+  }
+
+  @media (max-width: 991px) {
+    padding: 32px 0 32px 0;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 639px;
+    margin-right: 129px;
+
+    @media (max-width: 991px) {
+      margin-right: 0;
+      min-width: 100%;
+    }
+
+    .paragraph {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 16px;
+    line-height: 22px;
+
+    @media (max-width: 991px) {
+      order: -1;
+      margin-bottom: 32px
+    }
+
+    .phone {
+      display: flex;
+      color: #151317;
+
+      &::before {
+        content: url("../../assets/svg/phone.svg");
+        max-width: 20px;
+        max-height: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    .mail {
+      display: flex;
+      color: #151317;
+
+      &::before {
+        content: url("../../assets/svg/mail.svg");
+        max-width: 20px;
+        max-height: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

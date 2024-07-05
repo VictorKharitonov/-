@@ -1,0 +1,77 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+{
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 48px;
+  font-size: 14px;
+  line-height: 16px;
+  max-width: 468px;
+  gap: 12px;
+  margin: 8px 0 4px 0;
+
+  .inputLabel {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .input {
+    z-index: 100;
+    background: #F8F8F8;
+    color: #808185;
+    border: none;
+    margin: 0 8px 0 16px;
+    padding: 12px 0;
+    width: 95%;
+    height: 95%;
+    border-radius: 8px;
+    outline: none;
+
+    &:focus ~ .inputBackground {
+      box-shadow: 0 0 5pt 0.5pt lighten(#808185, 30%);
+      border: 1px solid lighten(#808185, 30%);
+    }
+  }
+
+  .inputBackground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #F8F8F8;
+    color: #808185;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+  }
+
+  .inputIcon {
+    position: relative;
+    right: 12px;
+    z-index: 150;
+    cursor: pointer;
+    transition: .5s opacity;
+
+    &:hover {
+      opacity: .8;
+      transition: .5s opacity;
+    }
+  }
+}
+
+.errorWrapper {
+  border: 1px solid #FF6161;
+  border-radius: 8px;
+}
+
+.isError {
+  font-size: 10px;
+  line-height: 12px;
+  color: #FF6161;
+}

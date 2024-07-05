@@ -1,0 +1,28 @@
+.singUpFormWrapper {
+  min-width: 500px;
+  padding: 16px;
+  border-radius: 16px;
+  margin: auto 0;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+
+  @media (max-width: 768px) {
+    min-width: 450px;
+  }
+
+  @media (max-width: 475px) {
+    min-width: 100%;
+  }
+
+  .formTitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    margin-bottom: 16px;
+  }
+
+  .singUpForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
